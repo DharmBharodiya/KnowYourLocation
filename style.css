@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+html{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  /* background: linear-gradient(#252930 50%, #5372F0 50%); */
+  background: linear-gradient(#355070 50%, #6d597a    50%);
+}
+::selection{
+  color: #fff;
+  background: #5372F0;
+}
+button{
+  border: none;
+  outline: none;
+  font-size: 50px;
+  /* color: #5372F0; */
+  color: #2e6f95;
+  padding: 23px 44px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 500;
+  background: #fff;
+  box-shadow: 0 0 20px 0 rgba(0,0,0,0.1);
+}
+.splash{
+  width: 100vw;
+  height: 100vh;
+  color: white;
+  background: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.splash.display-none{
+  width: 100vw;
+  height: 100vh;
+  color: white;
+  background: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: -100;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.splash h1{
+  font-size: 3em;
+}
+.splash p{
+  font-size: 1.3em;
+}
+.splash p a {
+  color: white;
+}
+
+.fade-in{
+ opacity: 0.3;
+ animation: fadeIn 0.5s ease-in forwards;
+}
+
+@keyframes fadeIn{
+  to{
+    opacity: 100%;
+  }
+}
+
+
+
+@media only screen and (max-width: 650px){
+  button{
+    font-size: 40px;
+  }
+}
+
+@media only screen and (max-width: 500px){
+  button{
+    font-size: 30px;
+  }
+  .splash h1{
+    font-size: 2.5em;
+  }
+}
+@media only screen and (max-width: 415px){
+  button{
+    font-size: 27px;
+    padding: 10px 30px;
+  }
+  .splash h1{
+    font-size: 2em;
+  }
+}
